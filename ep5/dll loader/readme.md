@@ -8,7 +8,7 @@
 
 ```asm
 00553F97   > 60              PUSHAD
-00553F98   . 68 AA3F5500     PUSH ps_game.00553FAA                          ; /FileName = "ps_game.dll"
+00553F98   . 68 AA3F5500     PUSH ps_game.00553FAA                          ; /FileName = "loadlib.dll"
 00553F9D   . FF15 C4415500   CALL DWORD PTR DS:[<&KERNEL32.LoadLibraryA>]   ; \LoadLibraryA
 00553FA3   . 61              POPAD
 00553FA4   . 5E              POP ESI
@@ -19,5 +19,6 @@
 ```
 
 ```asm
-00553FAA   . 70 73 5F 67 61 6D 65 2E 64 6C 6C 00   ASCII "ps_game.dll",0
+00553FAA   . 6C 6F 61 64 6C 69 62 2E 64 6C 6C 00   ASCII "loadlib.dll",0
+
 ```
