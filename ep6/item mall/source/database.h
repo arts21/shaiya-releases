@@ -7,12 +7,10 @@
 
 #include "pch.h"
 
-using std::vector;
-
 typedef struct _DATABASEINFO
 {
 	CString szName;        
-	vector<CString> vecValue;
+	std::vector<CString> vecValue;
 
 }DATABASEINFO,*PDATABASEINFO;
 
@@ -164,7 +162,7 @@ public:
 	}
 public:
 	_ConnectionPtr        m_pConnect;   
-	vector<_DATABASEINFO> m_vecDATABASE;
+	std::vector<_DATABASEINFO> m_vecDATABASE;
 	DWORD                 m_dwIndex;   
 	DWORD                 m_nRecordCount;
 };
