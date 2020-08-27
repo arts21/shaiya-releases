@@ -5,7 +5,6 @@
 #include <sdkddkver.h>
 #include <windows.h>
 #include <atlstr.h>
-#include <stdafx.h>
 #include <comdef.h>
 #include <vector>
 
