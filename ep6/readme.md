@@ -1,4 +1,4 @@
-**ps_game**
+* new item mall solution
 * new console commands
 ```asm
 /ntcn charname message
