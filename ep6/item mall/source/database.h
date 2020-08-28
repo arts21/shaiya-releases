@@ -1,4 +1,6 @@
-#pragma once
+#ifndef DATABASE_H
+#define DATABASE_H
+
 #if defined(ADO2_OLD)
 #import "msado20.tlb" no_namespace rename("EOF", "adoEOF") 
 #else   
@@ -166,3 +168,5 @@ public:
 	DWORD                 m_dwIndex;   
 	DWORD                 m_nRecordCount;
 };
+
+#endif
