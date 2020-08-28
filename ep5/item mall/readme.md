@@ -1,6 +1,3 @@
-```diff
-- not compatible with pet.dll -
-```
 **ep6 version**
 
 https://github.com/426f776965/shaiya-releases/tree/master/ep6/item%20mall
