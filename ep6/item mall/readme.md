@@ -1,7 +1,6 @@
 **instructions**
 1. copy ps_game, ps_dbAgent, and dbconn.dll to your bin
-2. also copy msado15.dll if it does not exist in your system
-3. execute usp_Read_User_CashPoint_UsersMaster and test
+2. execute usp_Read_User_CashPoint_UsersMaster and test
 
 **ps_game**
 * new item mall solution
