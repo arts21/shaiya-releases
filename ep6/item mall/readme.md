@@ -1,5 +1,5 @@
 **instructions**
-1. copy ps_game, ps_dbAgent, and dbconn.dll to your bin
+1. copy ps_game, ps_dbAgent, dbconn.dll, and msado15.dll to your bin
 2. execute usp_Read_User_CashPoint_UsersMaster
 
 **ps_game**
