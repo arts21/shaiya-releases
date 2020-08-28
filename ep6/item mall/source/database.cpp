@@ -22,15 +22,15 @@ BOOL CDataBase::LinkDataBase()
 	{
 		OutputDebugString(L"");
 	}
-	Sleep(500); //delay the function for a bit
-	wchar_t szUsername[255]; //create a buffer to store the username
-	wchar_t szPassword[255]; //create a buffer to store the password
-	GetPrivateProfileString(L"DbInfo", L"Account", L"", szUsername, 255, L".\\Db.ini");
-	GetPrivateProfileString(L"DbInfo", L"Pw", L"", szPassword, 255, L".\\Db.ini");
-	CString szLink; //initialize the query string variable
-	CString szUid = szUsername; //convert the username into a string
-	CString szPwd = szPassword; //convert the password into a string
-	szLink.Format(L"Provider=SQLOLEDB;Server=127.0.0.1;Database=PS_UserData;"); //define the login string
+	Sleep(500);
+	wchar_t szUser[255];
+	wchar_t szPass[255];
+	GetPrivateProfileString(L"DbInfo", L"Account", L"", szUser, 255, L".\\Db.ini");
+	GetPrivateProfileString(L"DbInfo", L"Pw", L"", szPass, 255, L".\\Db.ini");
+	CString szLink;
+	CString szUid = szUser;
+	CString szPwd = szPass;
+	szLink.Format(L"Provider=SQLOLEDB;Server=127.0.0.1;Database=PS_GameDefs;"); //define the login string
 	m_pConnect->Open(_bstr_t(szLink), _bstr_t(szUid), _bstr_t(szPwd), adModeUnknown); //execute the query
 	return TRUE;
 }
