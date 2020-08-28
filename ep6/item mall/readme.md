@@ -11,12 +11,12 @@
 ```
 
 **ps_dbAgent**
-* calls usp_Read_User_CashPoint_UsersMaster
+* calls usp_Read_User_CashPoint_UsersMaster when a user enters the game
 
 
 **notes**
 
-- the new ps_game and ps_dbAgent solve the point loading and spending issues
+- the new ps_game and ps_dbAgent files correct point spending and loading issues
 - dbconn.dll reads the sql login from Db.ini and supports the pet.dll connection
 - the dll has been built with runtime libraries in case your system lacks support
 
