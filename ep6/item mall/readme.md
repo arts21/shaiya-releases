@@ -4,7 +4,7 @@
 
 - properties -> linker -> additional dependencies: legacy_stdio_definitions.lib;
 - properties -> c++ -> language -> conformance mode: no
-- properties -> c++ -> advanced -> disable specific warnings: 4996
+- properties -> c++ -> advanced -> disable specific warnings: 4996;4838
 
 *original code*
 
