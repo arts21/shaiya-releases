@@ -16,8 +16,8 @@
 
 **notes**
 
-- the new ps_game and ps_dbAgent files correct point spending and loading
-- dbconn.dll reads the sql login from Db.ini and supports the pet.dll connection
+- the ps_game and ps_dbAgent files correct the problems with item mall points
+- dbconn.dll reads the login from Db.ini and supports the pet.dll connection
 - the dll has been built with runtime libraries in case your system lacks support
 
 **build**
