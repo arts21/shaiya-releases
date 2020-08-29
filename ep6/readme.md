@@ -1,7 +1,6 @@
 * new item mall solution
 * new player commands
 * elemental gear colors
-```
 
 **game.exe**
 ```asm
