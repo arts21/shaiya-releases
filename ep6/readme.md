@@ -5,7 +5,7 @@
 
 **game.exe**
 ```asm
-skill delay
+skill delay "fix"
 004FE8F1 - nop
 
 speed enchant
