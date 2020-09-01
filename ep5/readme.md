@@ -1,5 +1,4 @@
 * new item mall solution
-* custom notice function
 * ps_game functions
 * ps_dbAgent functions
 * extra mini map support
