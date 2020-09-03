@@ -2,6 +2,7 @@
 * ps_game functions
 * ps_dbAgent functions
 * extra mini map support
+* custom notice function
 
 **game.exe**
 ```asm
