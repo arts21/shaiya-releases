@@ -1,1 +1,1 @@
-c++ source that adds a color overlay to items found in an array
+c++ source that adds a color overlay to items linked with elemental lapis or found in an array
