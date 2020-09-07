@@ -52,6 +52,258 @@ bool wind_res(int val) {
 void __declspec(naked) bag_hook() {
 	__asm {
 		pushad
+		//first slot
+		mov dl,byte ptr[eax+0x90E2FE]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind
+		//second slot
+		mov dl,byte ptr[eax+0x90E2FF]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind
+		//third slot
+		mov dl,byte ptr[eax+0x90E300]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind
+		//fourth slot
+		mov dl,byte ptr[eax+0x90E301]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind
+		//fifth slot
+		mov dl,byte ptr[eax+0x90E302]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind
+		//sixth slot
+		mov dl,byte ptr[eax+0x90E303]
+		cmp dl,0x43 //blaze-burn lv1
+		je _fire
+		cmp dl,0x92 //blaze-light lv1
+		je _fire
+		cmp dl,0xB5 //blaze-burn lv2
+		je _fire
+		cmp dl,0xB9 //blaze-light lv2
+		je _fire
+		cmp dl,0xB1 //phoenix
+		je _fire
+		cmp dl,0x44 //water-fear lv1
+		je _water
+		cmp dl,0x93 //water-light lv1
+		je _water
+		cmp dl,0xB6 //water-fear lv2
+		je _water
+		cmp dl,0xBA //water-light lv2
+		je _water
+		cmp dl,0xB2 //hydra
+		je _water
+		cmp dl,0x45 //earth-shock lv1
+		je _earth
+		cmp dl,0x94 //earth-panic lv1
+		je _earth
+		cmp dl,0xB7 //earth-shock lv2
+		je _earth
+		cmp dl,0xBB //earth-panic lv2
+		je _earth
+		cmp dl,0xB3 //terra
+		je _earth
+		cmp dl,0x46 //wind-gale lv1
+		je _wind
+		cmp dl,0x95 //wind-scroll lv1
+		je _wind
+		cmp dl,0xB8 //wind-gale lv2
+		je _wind
+		cmp dl,0xBC //wind-scroll lv2
+		je _wind
+		cmp dl,0xB4 //storm
+		je _wind	
 		//move all the types into ecx
 		movzx ecx,byte ptr[eax+0x90E2F9]
 		//multiply the types by 1000
