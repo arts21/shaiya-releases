@@ -104,7 +104,7 @@ void __declspec(naked) effect_hook() {
 		//check which item was used
 		_item:
 		cmp dword ptr[eax],0x18AEE
-    je _101102
+                je _101102
 		cmp dword ptr[eax],0x18AEF
 		je _101103
 		cmp dword ptr[eax],0x18AF0
@@ -342,7 +342,7 @@ void __declspec(naked) cancel_hook() {
 		_check:
 		cmp dword ptr[eax+0x58B8],0x0
 		jne _cancel
-    jmp cancel_fail
+                jmp cancel_fail
 	}
 }
 
