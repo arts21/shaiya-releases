@@ -1,3 +1,4 @@
+* town teleport scrolls
 * new item mall solution
 * new player commands
 * elemental item colors
