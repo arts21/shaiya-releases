@@ -89,7 +89,7 @@ void __declspec(naked) effect_hook() {
 		push ecx
 		xor edx,edx
 		mov eax,ebp //user = ebp
-		call PSendViewAction
+		call PSendViewCombat
 
 		//consume the item
 		mov edx,[esp+0xB5C]
