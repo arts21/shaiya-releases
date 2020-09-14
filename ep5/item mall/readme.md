@@ -16,8 +16,3 @@ https://github.com/426f776965/shaiya-releases/tree/master/ep6/item%20mall
 
 **ps_dbAgent**
 * calls usp_Read_User_CashPoint_UsersMaster
-
-**updates**
-```diff
-07/16/2020 - removed memset function
-```
