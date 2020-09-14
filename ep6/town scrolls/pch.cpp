@@ -20,17 +20,33 @@ void __declspec(naked) packet_hook() {
 
 		_town:
 		//save the packet in memory
-		pushad
+		push eax
+		push edx
 		mov eax,dword ptr[ebp+0x0]
 		mov dl,byte ptr[ebp+0x4]
 		mov dword ptr[tele_packet],eax
 		mov byte ptr[tele_packet+0x4],dl 
-		popad
+		pop edx
+		pop eax
 
 		//send the packet back
 		push ecx //user = ecx
 		push offset tele_packet
 		push 0x5
+		call send_packet_player
+
+		//build the action view packet
+		push eax
+		//move the charid into eax
+		mov eax,[ecx+0xDC]
+		mov word ptr[cast_packet],0x221
+		mov dword ptr[cast_packet+0x2],eax
+		pop eax
+
+		//send the action view packet
+		push ecx //user = ecx
+		push offset cast_packet
+		push 0x6
 		call send_packet_player
 
 		//error checking
@@ -76,20 +92,10 @@ void __declspec(naked) effect_hook() {
 
 		_teleport:
 		mov ecx,[esp+0x18]
-		//move the char id into eax
-		mov eax,[ebp+0xDC]
 		add ecx,0x1388 //delay time
+		//save the type and delay
 		mov dword ptr[ebp+0x58B4],0x1
 		mov dword ptr[ebp+0x58B8],ecx
-		mov edx,0x221 //view opcode
-		push 06 //packet length
-		lea ecx,[esp+0x20]
-		mov word ptr[esp+0x20],dx
-		mov dword ptr[esp+0x22],eax
-		push ecx
-		xor edx,edx
-		mov eax,ebp //user = ebp
-		call PSendViewCombat
 
 		//consume the item
 		mov edx,[esp+0xB5C]
