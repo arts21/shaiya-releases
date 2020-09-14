@@ -18,7 +18,7 @@ DWORD cancel_fail = 0x49AEBA;
 //ps_game functions
 DWORD ItemUseNSend = 0x4728E0;
 DWORD SConnectionSend = 0x4ED0E0;
-DWORD PSendViewAction = 0x4D5690;
+DWORD PSendViewAction = 0x4D56D0;
 //tele packet buffer
 unsigned char tele_packet[5];
 
