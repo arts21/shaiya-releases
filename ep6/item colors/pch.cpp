@@ -831,7 +831,7 @@ void __declspec(naked) bar_hook() {
 }
 
 //main function
-void item_color() {
+void ItemColors() {
 	//asm hook addresses
 	Hook((void*)0x51826D, bag_hook, 8);
 	Hook((void*)0x4FFCE3, bar_hook, 5);
