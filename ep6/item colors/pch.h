@@ -5,7 +5,7 @@
 #include <windows.h> 
 #include <array>
 //main function
-void item_color();
+void ItemColors();
 //hook function
 BOOL Hook(void * pAddr, void * pNAddr, int len = 5);
 //expressions
