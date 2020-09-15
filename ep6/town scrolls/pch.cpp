@@ -35,20 +35,6 @@ void __declspec(naked) packet_hook() {
 		push 0x5
 		call send_packet_player
 
-		//build the action view packet
-		push eax
-		//move the charid into eax
-		mov eax,[ecx+0xDC]
-		mov word ptr[cast_packet],0x221
-		mov dword ptr[cast_packet+0x2],eax
-		pop eax
-
-		//send the action view packet
-		push ecx //user = ecx
-		push offset cast_packet
-		push 0x6
-		call send_packet_player
-
 		//error checking
 		jmp error_check 
 
