@@ -91,15 +91,15 @@ void __declspec(naked) effect_hook() {
 		mov dword ptr[ebp+0x58B8],ecx
 			
 		//send the action view
-		mov ecx,[ebp+0xDC] //charid
-		mov eax,0x221 //opcode
+		mov eax,[ebp+0xDC] //charid
+		mov edx,0x0221 //opcode
 		push 0x6 //length
-		lea edx,[esp+0x20]
-		mov word ptr[esp+0x20],ax
-		push edx //packet data
+		lea ecx,[esp+0x20]
+		mov word ptr[esp+0x20],dx
+		mov dword ptr[esp+0x22],eax
+		push ecx //packet
 		xor edx,edx
 		mov eax,ebp //user = ebp
-		mov [esp+0x26],ecx
 		call PSendViewCombat
 
 		//consume the item
