@@ -19,9 +19,6 @@ LPCSTR szRepair = "/blacksmith";
 LPCSTR szReroll = "/recreation";
 unsigned char npc_jmp[] = { 0xEB, 0x05 };
 unsigned char max_sell[] = { 0x90, 0x90 };
-//CustomGame.dll help menu hook address
 unsigned char help_menu[] = { 0xE8, 0x0B, 0x9F, 0xFF, 0xFF };
-//CustomGame.dll command hook address
-unsigned char old_cmd[] = { 0x8B, 0x81, 0x2C, 0x01, 0x00, 0x00 };
 
 #endif
