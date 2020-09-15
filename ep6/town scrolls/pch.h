@@ -19,7 +19,7 @@ DWORD cancel_fail = 0x49AEBA;
 DWORD ItemUseNSend = 0x4728E0;
 DWORD SConnectionSend = 0x4ED0E0;
 DWORD PSendViewCombat = 0x4D56D0;
-//packet buffers
+//packet buffer
 unsigned char tele_packet[5];
 
 #endif
