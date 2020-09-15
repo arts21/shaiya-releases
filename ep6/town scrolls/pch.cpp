@@ -9,6 +9,13 @@ unsigned char location;
 };
 */
 
+/*
+struct SendViewCombat {
+unsigned short opcode = 0x0221;
+unsigned int charid;
+};
+*/
+
 //hook CUser::PacketPC
 void __declspec(naked) packet_hook() {
 	__asm {
@@ -82,9 +89,21 @@ void __declspec(naked) effect_hook() {
 		//save the type and delay
 		mov dword ptr[ebp+0x58B4],0x1
 		mov dword ptr[ebp+0x58B8],ecx
+			
+		//send the action view
+		mov ecx,[ebp+0xDC] //charid
+		mov eax,0x221 //opcode
+		push 0x6 //length
+		lea edx,[esp+0x20]
+		mov word ptr[esp+0x20],ax
+		push edx //packet data
+		xor edx,edx
+		mov eax,ebp //user = ebp
+		mov [esp+0x26],ecx
+		call PSendViewCombat
 
 		//consume the item
-		mov edx,[esp+0xB5C]
+		mov edx,[esp+0xB5C] //slot
 		push 0x0
 		mov eax,edi
 		push edx
