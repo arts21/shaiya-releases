@@ -10,7 +10,7 @@ unsigned char location;
 */
 
 /*
-struct SendViewCombat {
+struct SendViewAction {
 unsigned short opcode = 0x0221;
 unsigned int charid;
 };
@@ -100,7 +100,7 @@ void __declspec(naked) effect_hook() {
 		push ecx //packet
 		xor edx,edx
 		mov eax,ebp //user = ebp
-		call PSendViewCombat
+		call PSendViewAction
 
 		//consume the item
 		mov edx,[esp+0xB5C]
