@@ -103,11 +103,11 @@ void __declspec(naked) effect_hook() {
 		call PSendViewCombat
 
 		//consume the item
-		mov edx,[esp+0xB5C] //slot
-		push 0x0
+		mov edx,[esp+0xB5C]
+		push 0x0 //move map bool
 		mov eax,edi
-		push edx
-		push eax
+		push edx //slot
+		push eax //bag
 		mov ecx,ebp //user = ebp
 		call ItemUseNSend
 		jmp effect_jump
