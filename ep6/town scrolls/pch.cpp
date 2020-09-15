@@ -104,8 +104,8 @@ void __declspec(naked) effect_hook() {
 
 		//consume the item
 		mov edx,[esp+0xB5C]
-		push 0x0 //move map bool
-		mov eax,edi
+		mov eax,[esp+0xB58]
+		push 00 // move map bool
 		push edx //slot
 		push eax //bag
 		mov ecx,ebp //user = ebp
