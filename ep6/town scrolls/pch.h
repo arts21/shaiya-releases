@@ -20,6 +20,5 @@ DWORD ItemUseNSend = 0x4728E0;
 DWORD SConnectionSend = 0x4ED0E0;
 //packet buffers
 unsigned char tele_packet[5];
-unsigned char cast_packet[6];
 
 #endif
