@@ -101,11 +101,13 @@ void __declspec(naked) effect_hook() {
 		xor edx,edx
 		mov eax,ebp //user = ebp
 		call PSendViewAction
-
+			
+		//to-do: consume after cast
+		
 		//consume the item
 		mov edx,[esp+0xB5C]
 		mov eax,[esp+0xB58]
-		push 00 // move map bool
+		push 0x0 // move map bool
 		push edx //slot
 		push eax //bag
 		mov ecx,ebp //user = ebp
@@ -344,7 +346,7 @@ void __declspec(naked) effect_hook() {
 //hook CUser::CancelMove
 void __declspec(naked) cancel_hook() {
 	__asm {
-		cmp eax,0x2
+		cmp eax,0x2 //teleport type
 		jl _check
 		_cancel:
 		jmp cancel_retn
